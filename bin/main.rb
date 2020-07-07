@@ -1,4 +1,4 @@
-require './lib/scrapper'
+require './lib/scraper'
 require './lib/movie'
 
 # You can refine your search by tweaking the variables below using the adjacent commented arrays as guideline
@@ -14,7 +14,7 @@ lang = 'en' # [en -> english, all -> all, fr -> french]
 
 url_link = "https://yts.mx/browse-movies/#{search_term}/#{quailty}/#{genre}/#{rating}/#{order}/#{year}/#{lang}"
 puts('Please wait, this may take some time depending on your internet speeds')
-scraper = Scrapper.new(url_link)
+scraper = Scraper.new(url_link)
 
 puts("Dislpaying #{scraper.movies.size} Movies")
 puts

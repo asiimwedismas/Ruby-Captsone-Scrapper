@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 require_relative './movie'
 
-class Scrapper
+class Scraper
   attr_reader :url_link, :movies, :data
 
   def initialize(url_link)
