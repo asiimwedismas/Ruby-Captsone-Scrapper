@@ -1,7 +1,7 @@
 require './lib/scrapper'
 require './lib/movie'
 
-# You can refine your search by tweaking the variables below using the adjecent commented arrays as guideline
+# You can refine your search by tweaking the variables below using the adjacent commented arrays as guideline
 # happy pirating
 
 search_term = '0' # [enter search term or 0 to leave blank]
