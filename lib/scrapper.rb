@@ -16,7 +16,7 @@ class Scrapper
   private
 
   def scrape_movies
-    doc = Nokogiri::HTML(open(@url_link))
+    doc = Nokogiri::HTML(URI.open(@url_link))
     @data = doc.css('.browse-movie-wrap')
     extract_movies
   end
