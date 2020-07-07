@@ -13,10 +13,10 @@ year = '0' # [enter year or 0 for any year]
 lang = 'en' # [en -> english, all -> all, fr -> french]
 
 url_link = "https://yts.mx/browse-movies/#{search_term}/#{quailty}/#{genre}/#{rating}/#{order}/#{year}/#{lang}"
-
+puts('Please wait, this may take some time depending on your internet speeds')
 scraper = Scrapper.new(url_link)
 
-puts("Dislpaying #{scraper.movies.size}   Movies")
+puts("Dislpaying #{scraper.movies.size} Movies")
 puts
 
 scraper.movies.each do |entry|
