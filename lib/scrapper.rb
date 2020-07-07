@@ -1,12 +1,34 @@
-# frozen_string_literal: true
-# class scrapper
-# haas valrbale movies
-# has variable year
-# has variable generea
-# has varibale to store scrapped results
+require 'nokogiri'
+require 'open-uri'
+require_relative './movie'
 
-# method to scrapp movies
+class Scrapper
+  attr_reader :url_link, :movies, :data
 
-# method to extrac scrapped movies
+  def initialize(url_link)
+    @url_link = url_link
+    @data = nil
+    @movies = []
 
-# method to display scrapped movies
+    scrape_movies
+  end
+
+  private
+
+  def scrape_movies
+    doc = Nokogiri::HTML(open(@url_link))
+    @data = doc.css('.browse-movie-wrap')
+    extract_movies
+  end
+
+  def extract_movies
+    @data.each do |entry|
+      @movies << Movie.new(
+        entry.css('.browse-movie-bottom').css('.browse-movie-title').text,
+        entry.css('.browse-movie-bottom').css('.browse-movie-year').text,
+        entry.css('.browse-movie-link').css('.rating').text,
+        entry.css('a.browse-movie-link')[0]['href']
+      )
+    end
+  end
+end
