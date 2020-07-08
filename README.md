@@ -39,12 +39,6 @@ Contributions, issues and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
 Note that this is purely for academic purposes, don't use it to illegally download copyrighted movies.
