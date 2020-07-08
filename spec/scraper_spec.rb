@@ -14,11 +14,9 @@ describe Movie do
 end
 
 describe Scraper do
-  describe '#initialize' do
-    it 'returns data from given url' do
-      url_link = 'https://yts.mx/browse-movies/0/all/animation/0/rating/0/en'
-      scraper = Scraper.new(url_link)
-      raise if scraper.data.nil?
-    end
+  let(:scraper) { Scraper.new('https://yts.mx/browse-movies/0/all/animation/0/rating/0/en') }
+
+  it 'Data attribute should contain a value after a successful object creation' do
+    raise if scraper.data.nil?
   end
 end
