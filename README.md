@@ -1,6 +1,6 @@
 # Ruby-Captsone-Scraper
 
-This is a movie scraper for the movie website yts, It lists movies based on a users choice and links to the specific movies thus eliminating the need to use the browser thus avoiding those annoying pop-ups.
+This is a movie scraper for the movie website yts. It lists movies based on a user's choice providing links to the specific movies. This eliminates the need to use the browser thus avoiding those annoying pop-ups that open with each click or search.
 
 ![screenshot](screenshot.png)
 
