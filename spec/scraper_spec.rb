@@ -1,5 +1,5 @@
-require './lib/scraper'
-require './lib/movie'
+require_relative '../lib/scraper'
+require_relative '../lib/movie'
 
 describe Movie do
   describe '#initialize' do

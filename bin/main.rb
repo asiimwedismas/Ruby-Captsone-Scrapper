@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require './lib/scraper'
-require './lib/movie'
+require_relative '../lib/scraper'
+require_relative '../lib/movie'
 
 # You can refine your search by tweaking the variables below using the adjacent commented arrays as guideline
 # happy pirating
